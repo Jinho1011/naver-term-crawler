@@ -8,11 +8,27 @@ BASE_URL = "https://terms.naver.com"
 
 
 def translate_property_name(property_name):
-    translate_table = {"상품명": "name", "주종": "type",
-                       "도수": "ABV", "용량": "volume", "가격": "price",
-                       "원재료": "ingredients", "제조사": "manufacturer", "대표자명": "owner",
-                       "주소": "address", "연락처": "phone", "온라인스토어": "store",
-                       "홈페이지": "homepage"}
+    translate_table = {
+        "상품명": "name",
+        "맥주구분": "type",
+        "원산지": "country",
+        "용기구분": "container",
+        "생산주기": "production",
+        "주종": "type",
+        "도수": "ABV",
+        "알코올": "ABV",
+        "용량": "volume",
+        "가격": "price",
+        "원재료": "ingredients",
+        "생산자": "manufacturer",
+        "제조사": "manufacturer",
+        "대표자명": "owner",
+        "주소": "address",
+        "연락처": "phone",
+        "가격제공처": "price source",
+        "온라인스토어": "store",
+        "홈페이지": "homepage"
+    }
 
     try:
         return translate_table[property_name]
@@ -46,7 +62,7 @@ def get_doc(url):
     image_url = None
     try:
         image_detail_url = entry_soup.select_one(
-            '#size_ct > div.att_type > div > div.thmb.thmb_border > span > a').get('href')
+            '#size_ct > div.att_type div.thmb.thmb_border > span > a').get('href')
         image_url = parse.unquote(image_detail_url.split('imageUrl=')[1])
     except:
         image_url = ""
@@ -66,12 +82,12 @@ def get_doc(url):
     return doc
 
 
-def get_docs():
+def get_docs(CATEGORY_ID, MAX_PAGE):
     docs = []
 
-    for page_num in range(1, 38):
+    for page_num in range(1, MAX_PAGE):
         page_soup = get_soup(
-            'https://terms.naver.com/list.naver?cid=42726&categoryId=58635&page=' + str(page_num))
+            f'https://terms.naver.com/list.naver?cid=42726&categoryId={CATEGORY_ID}&page=' + str(page_num))
 
         titles = page_soup.select(
             '#content > div.list_wrap > ul > li > div.info_area > div.subject > strong > a:nth-child(1)')
@@ -90,5 +106,8 @@ def save_as_json(docs, file_name):
 
 
 if __name__ == '__main__':
-    docs = get_docs()
-    save_as_json(docs, "data")
+    한국전통주백과 = 58635
+    맥주백과 = 59595
+
+    docs = get_docs(맥주백과, 82)
+    save_as_json(docs, "맥주")
