@@ -1,10 +1,35 @@
 import json
-from urllib import parse
-
 import requests
+import configparser
+from urllib import parse
 from bs4 import BeautifulSoup
 
 BASE_URL = "https://terms.naver.com"
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+
+def get_address_content(address):
+    url = "https://dapi.kakao.com/v2/local/search/address.json"
+
+    payload = 'query=' + parse.quote(address)
+
+    headers = {
+        'Authorization': 'KakaoAK ' + config['SECRET']['kakao'],
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+
+    document = response.json()['documents'][0]
+
+    return {
+        "lat": document["x"],
+        "lng": document["y"],
+        "province": document["address"]["region_1depth_name"],
+        "city": document["address"]["region_2depth_name"],
+    }
 
 
 def translate_property_name(property_name):
@@ -74,6 +99,13 @@ def get_doc(url):
         content = normalize_string(tr.select_one('td').text)
         if label == "원재료":
             content = content.split(", ")
+        if label == "주소":
+            content = get_address_content(content)
+        if label == "도수":
+            content = float(content[:-1])
+        if label == "용량":
+            content = float(content[:-2])
+
         doc[translate_property_name(label)] = content
 
     doc["source"] = term_source
@@ -106,8 +138,9 @@ def save_as_json(docs, file_name):
 
 
 if __name__ == '__main__':
-    한국전통주백과 = 58635
+    한국전통주백과 = 58636
+    한국전통주백과_max_page = 39
     맥주백과 = 59595
 
-    docs = get_docs(맥주백과, 82)
-    save_as_json(docs, "맥주")
+    docs = get_docs(한국전통주백과, 2)
+    save_as_json(docs, "전통주")

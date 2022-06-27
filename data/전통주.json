@@ -1,0 +1,343 @@
+﻿{
+    "data": [
+        {
+            "name": "서울의 밤",
+            "type": "리큐르",
+            "ABV": 25.0,
+            "volume": 375.0,
+            "price": "￦7,500(가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "매실증류주원액",
+                "벌꿀",
+                "포도당",
+                "노간주나무열매",
+                "정제수"
+            ],
+            "manufacturer": "더한주류",
+            "owner": "한상헌",
+            "address": {
+                "lat": "126.90696666699",
+                "lng": "37.5854596979234",
+                "province": "서울",
+                "city": "은평구"
+            },
+            "phone": "02-2280-8080",
+            "store": "https://shopping.naver.com/fresh/traditionalalcohol/stores/100079873",
+            "source": "서울의 밤 - 깨끗한 밤, 풍부한 밤, 서울의 밤 (한국전통주백과, (사)한국전통민속주협회, 한국가양주연구소, 전통주갤러리, 플레이온컴, 농림축산식품부, 한국농수산식품유통공사(aT))",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_2/20181016191204559_YG8AEQGYD.jpg/fe87_266_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "제주 고소리술",
+            "type": "증류식소주",
+            "ABV": 40.0,
+            "volume": 400.0,
+            "price": "￦45,000(가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "잡곡",
+                "누룩",
+                "정제수"
+            ],
+            "manufacturer": "제주술익는집",
+            "owner": "김희숙",
+            "address": {
+                "lat": "126.793773142145",
+                "lng": "33.3849602978721",
+                "province": "제주특별자치도",
+                "city": "서귀포시"
+            },
+            "phone": "064-787-5046",
+            "store": "https://shopping.naver.com/fresh/traditionalalcohol/stores/100113496",
+            "source": "제주 고소리술 - 제주특별자치도 무형문화재 제11호 (한국전통주백과, (사)한국전통민속주협회, 한국가양주연구소, 전통주갤러리, 플레이온컴, 농림축산식품부, 한국농수산식품유통공사(aT))",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_1/20181012222003982_BRW7WNUMG.jpg/fe87_250_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "source": "경상 · 대구 · 부산 · 울산 지역 술 (향기로운 한식, 우리술 산책, 2018. 07. 01., 김재호, 류인수, 문선희, 유병호, 전진아, 정석태, 최규택, 최한석, 허시명, 권희자, 이대형, 농림축산식품부)",
+            "image": ""
+        },
+        {
+            "name": "오메기 술",
+            "type": "약주",
+            "ABV": 13.0,
+            "volume": 375.0,
+            "price": "￦13,000 (가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "쌀",
+                "차조",
+                "입국",
+                "누룩",
+                "효모",
+                "효소",
+                "청호",
+                "조릿대",
+                "감초",
+                "정제수"
+            ],
+            "manufacturer": "제주샘영농조합법인",
+            "owner": "김숙희",
+            "address": {
+                "lat": "126.337530129204",
+                "lng": "33.4447875750448",
+                "province": "제주특별자치도",
+                "city": "제주시"
+            },
+            "phone": "064) 799-4225",
+            "store": "https://shopping.naver.com/fresh/traditionalalcohol/stores/100074415",
+            "source": "오메기 술 - 차조로 빚는 제주 오메기 술 (한국전통주백과, (주)프레시멘토 컨텐츠 기획실, 류인수, 프레시멘토)",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_1/20170116183036715_XSLAO1MK2.jpg/fe87_090_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "송명섭 막걸리",
+            "type": "탁주",
+            "ABV": 6.0,
+            "volume": 900.0,
+            "price": "￦3,000(가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "국내산쌀",
+                "곡자",
+                "정제수"
+            ],
+            "manufacturer": "태인합동주조",
+            "owner": "송명섭",
+            "address": {
+                "lat": "126.944889290351",
+                "lng": "35.6514222850456",
+                "province": "전북",
+                "city": "정읍시"
+            },
+            "phone": "063-534-4018",
+            "homepage": "https://taein.modoo.at",
+            "source": "송명섭 막걸리 - 막걸리 마니아들이 손꼽는 드라이한 막걸리 \\'송막\\' (한국전통주백과, (사)한국전통민속주협회, 한국가양주연구소, 전통주갤러리, 플레이온컴, 농림축산식품부, 한국농수산식품유통공사(aT))",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_1/20181013063235756_GV9IBYQ6O.jpg/fe87_317_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "티나",
+            "type": "리큐르",
+            "ABV": 16.0,
+            "volume": 750.0,
+            "price": "￦54,000 (가격은 판매처 별로 상이할 수 있습니다)",
+            "ingredients": [
+                "딸기추출물",
+                "죽력",
+                "정제수",
+                "주정",
+                "액상과당(포도당)",
+                "구연산",
+                "딸기향",
+                "망고향"
+            ],
+            "manufacturer": "추성고을",
+            "owner": "양대수",
+            "address": {
+                "lat": "126.985286653335",
+                "lng": "35.3663865750093",
+                "province": "전남",
+                "city": "담양군"
+            },
+            "phone": "061-383-3011",
+            "store": "https://smartstore.naver.com/cs3011/products/4694771979",
+            "source": "티나(TINA) - 딸기와 죽력으로 명인이 만든 파티용 젊은 전통주 (한국전통주백과, (사)한국전통민속주협회, 한국가양주연구소, 세종사이버대학교, 플레이온컴, 농림축산식품부, 한국농수산식품유통공사(aT))",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_2/20200824175231961_QVOJ2OBIR.jpg/fe87_453_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "인천 생 소성주",
+            "type": "탁주",
+            "ABV": 6.0,
+            "volume": 750.0,
+            "price": "￦1,200 (가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "쌀",
+                "팽화미",
+                "정제수",
+                "국",
+                "효모",
+                "아스파탐",
+                "효소",
+                "이소말토 올리고당"
+            ],
+            "manufacturer": "인천탁주",
+            "owner": "정규성",
+            "address": {
+                "lat": "126.709115364567",
+                "lng": "37.5217481784248",
+                "province": "인천",
+                "city": "부평구"
+            },
+            "phone": "032) 518-7111",
+            "homepage": "http://sosungju.modoo.at/",
+            "source": "인천 생 소성주 - 인천막걸리의 자부심 (한국전통주백과, (주)프레시멘토 컨텐츠 기획실, 류인수, 프레시멘토)",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_1/20170224173842228_JAPYM0YLK.jpg/fe87_069_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "레돔 내추럴 스파클링 로제와인",
+            "type": "과실주",
+            "ABV": 7.5,
+            "volume": 750.0,
+            "price": "￦38,000 (가격은 판매처 별로 상이할 수 있습니다)",
+            "ingredients": [
+                "포도(99.99%)"
+            ],
+            "manufacturer": "농업회사법인 작은알자스",
+            "owner": "신용숙",
+            "address": {
+                "lat": "127.942510060773",
+                "lng": "37.0933090592145",
+                "province": "충북",
+                "city": "충주시"
+            },
+            "phone": "010-8607-2856",
+            "store": "https://shopping.naver.com/fresh/traditionalalcohol/stores/100308760",
+            "source": "레돔 내추럴 스파클링 로제와인 - 프랑스 농부가 한국에서 만든 자연주의 와인 (한국전통주백과, (사)한국전통민속주협회, 한국가양주연구소, 전통주갤러리, 플레이온컴, 농림축산식품부, 한국농수산식품유통공사(aT))",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_2/20190726172533265_UUZLJ3IGE.jpg/fe87_405_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "느린마을 막걸리",
+            "type": "탁주",
+            "ABV": 6.0,
+            "volume": 750.0,
+            "price": "￦2,300 (가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "쌀",
+                "국",
+                "효모",
+                "정제수"
+            ],
+            "manufacturer": "배상면주가",
+            "owner": "배영호",
+            "address": {
+                "lat": "127.309904875075",
+                "lng": "37.9059956872132",
+                "province": "경기",
+                "city": "포천시"
+            },
+            "phone": "031) 531-9300",
+            "store": "https://shopping.naver.com/fresh/traditionalalcohol/stores/100074175",
+            "source": "느린마을 막걸리 - 계절마다 다른 막걸리 (한국전통주백과, (주)프레시멘토 컨텐츠 기획실, 류인수, 프레시멘토)",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_1/20170113200951463_G4PWRXCHN.jpg/fe87_060_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "죽력고",
+            "type": "일반증류주",
+            "ABV": 32.0,
+            "volume": 700.0,
+            "price": "￦60,000(가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "국내산쌀",
+                "죽력",
+                "누룩",
+                "정제수"
+            ],
+            "manufacturer": "태인합동주조",
+            "owner": "송명섭",
+            "address": {
+                "lat": "126.944889290351",
+                "lng": "35.6514222850456",
+                "province": "전북",
+                "city": "정읍시"
+            },
+            "phone": "063-534-4018",
+            "homepage": "https://taein.modoo.at",
+            "source": "죽력고 - 4대에 걸쳐 130여년 동안 전승된 문화재급 전통주 (한국전통주백과, (사)한국전통민속주협회, 한국가양주연구소, 전통주갤러리, 플레이온컴, 농림축산식품부, 한국농수산식품유통공사(aT))",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_1/20181013062804553_IHQ5WHVTU.png/fe87_316_i1.png?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "금정산성 막걸리_750ml",
+            "type": "탁주",
+            "ABV": 8.0,
+            "volume": 750.0,
+            "price": "￦19,000(750ml*10병)(가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "백미",
+                "밀누룩",
+                "정제수",
+                "아스파탐"
+            ],
+            "manufacturer": "(유)금정산성토산주",
+            "owner": "유청길",
+            "address": {
+                "lat": "129.056434456445",
+                "lng": "35.2503508436577",
+                "province": "부산",
+                "city": "금정구"
+            },
+            "phone": "051-517-0202",
+            "store": "https://shopping.naver.com/fresh/traditionalalcohol/stores/100193300",
+            "source": "금정산성 막걸리 - 대한민국 민속주 1호 막걸리 (한국전통주백과, (사)한국전통민속주협회, 한국가양주연구소, 프레시멘토, 농림축산식품부, 한국농수산식품유통공사(aT))",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_1/20170522132458060_MR30GE50S.jpg/fe87_130_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "고소리 술",
+            "type": "소주",
+            "ABV": 40.0,
+            "volume": 700.0,
+            "price": "￦45,000 (가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "쌀",
+                "차조",
+                "입국",
+                "누룩",
+                "효모",
+                "효소",
+                "정제수",
+                "스테비올 배당체"
+            ],
+            "manufacturer": "제주샘영농조합법인",
+            "owner": "김숙희",
+            "address": {
+                "lat": "126.337530129204",
+                "lng": "33.4447875750448",
+                "province": "제주특별자치도",
+                "city": "제주시"
+            },
+            "phone": "064) 799-4225",
+            "store": "https://shopping.naver.com/fresh/traditionalalcohol/stores/100074415",
+            "source": "고소리 술 700ml - 제주의 첫 증류주 (한국전통주백과, (주)프레시멘토 컨텐츠 기획실, 류인수, 프레시멘토)",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_1/20170224162459095_J5Y6J4KD8.jpg/fe87_024_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "type": "증류식 소주",
+            "ABV": 40.0,
+            "당도": "중간 당도",
+            "탄닌": "적은 탄닌",
+            "바디감": "무거운 바디",
+            "산도": "낮은 산도",
+            "복합감": "풍부",
+            "source": "고소리술 (전통주 한식과 만나다, 2018. 07. 01.)",
+            "image": "https://dbscthumb-phinf.pstatic.net/5628_000_1/20181126164747829_O077A1JEA.jpg/fe115_36_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "type": "일반 증류주",
+            "ABV": 40.0,
+            "당도": "조금 낮은 당도",
+            "탄닌": "중간 탄닌",
+            "바디감": "조금 가벼운 바디",
+            "산도": "조금 낮은 산도",
+            "복합감": "중간",
+            "source": "감홍로 (전통주 한식과 만나다, 2018. 07. 01.)",
+            "image": "https://dbscthumb-phinf.pstatic.net/5628_000_1/20181126160156467_Y85T2CVBV.jpg/fe115_12_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        },
+        {
+            "name": "니모메",
+            "type": "약주",
+            "ABV": 11.0,
+            "volume": 375.0,
+            "price": "￦36,000(375ml*3병)(가격은 판매처 별로 상이할 수 있습니다.)",
+            "ingredients": [
+                "쌀(국내산)",
+                "감귤 진피",
+                "정제수"
+            ],
+            "manufacturer": "제주샘영농조합법인",
+            "owner": "김숙희",
+            "address": {
+                "lat": "126.337530129204",
+                "lng": "33.4447875750448",
+                "province": "제주특별자치도",
+                "city": "제주시"
+            },
+            "phone": "064-799-4225",
+            "store": "https://shopping.naver.com/fresh/traditionalalcohol/stores/100074415",
+            "source": "니모메 - 청정 제주의 자연을 오롯이 담은 싱그러운 술 (한국전통주백과, (사)한국전통민속주협회, 한국가양주연구소, 전통주갤러리, 플레이온컴, 농림축산식품부, 한국농수산식품유통공사(aT))",
+            "image": "https://dbscthumb-phinf.pstatic.net/4776_000_1/20181012224600173_KZGUAXX6O.jpg/fe87_253_i1.jpg?type=m4500_4500_fst_n&wm=Y"
+        }
+    ]
+}
