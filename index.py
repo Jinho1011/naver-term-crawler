@@ -104,7 +104,21 @@ def get_doc(url):
             address = get_address_content(content)
             if not address:
                 return False
-            content = address
+            else:
+                content = address
+        if label == "주종":
+            if content in ["탁주", "생탁주", "살균탁주", "전통 수제 탁주", "생막걸리"]:
+                content = "탁주"
+            elif content in ["청주", "살균약주", "약주(생약주)", "약주"]:
+                content = "약주"
+            elif content in ["증류주", "소주", "일반증류주", "증류식소주"]:
+                content = "소주/증류주"
+            elif content in ["과실주(포도)", "과실주"]:
+                content = "과실주"
+            elif content in ["리큐르"]:
+                content = "리큐르"
+            else:
+                content = "기타"
 
         if not translate_property_name(label):
             return False
@@ -112,10 +126,15 @@ def get_doc(url):
         if label not in whitelist:
             doc[translate_property_name(label)] = content
 
-    doc["source"] = term_source
-
-    if len(doc.keys()) == 11:
+    if len(doc.keys()) == 10:
         return doc
+
+# 탁주, 생탁주, 살균탁주, 전통 수제 탁주, 생막걸리 -> 탁주
+# 청주, 살균약주, 약주(생약주), 약주 -> 약주
+# 증류주, 소주, 일반증류주, 증류식소주 -> 소주/증류주
+# 과실주 (포도), 과실주 -> 과실주
+# 리큐르 -> 리큐르
+# 기타주류, 브랜디 -> 기타
 
 
 def get_docs(CATEGORY_ID, MAX_PAGE):
@@ -142,10 +161,18 @@ def save_as_json(docs, file_name):
         file.write(json.dumps({"data": docs}, ensure_ascii=False))
 
 
+def read_docs(file_name):
+    with open(file_name + ".json", "r", encoding='UTF-8-sig') as file:
+        docs = json.load(file)
+        return docs['data']
+
+
 if __name__ == '__main__':
     한국전통주백과 = 58635
     한국전통주백과_max_page = 50
     맥주백과 = 59595
 
     docs = get_docs(한국전통주백과, 한국전통주백과_max_page)
+    # docs = read_docs("./data/전통주")
+
     save_as_json(docs, "./data/전통주")
