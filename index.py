@@ -9,6 +9,22 @@ BASE_URL = "https://terms.naver.com"
 config = configparser.ConfigParser()
 config.read('config.ini')
 
+translate_table = {
+    "상품명": "name",
+    "주종": "type",
+    "도수": "ABV",
+    "용량": "volume",
+    "가격": "price",
+    "원재료": "ingredients",
+    "생산자": "manufacturer",
+    "제조사": "manufacturer",
+    "대표자명": "owner",
+    "주소": "address",
+    "연락처": "phone",
+    "온라인스토어": "store",
+    "홈페이지": "homepage"
+}
+
 
 def get_address_content(address):
     url = "https://dapi.kakao.com/v2/local/search/address.json"
@@ -22,43 +38,24 @@ def get_address_content(address):
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    document = response.json()['documents'][0]
+    try:
+        document = response.json()['documents'][0]
 
-    return {
-        "lat": document["x"],
-        "lng": document["y"],
-        "province": document["address"]["region_1depth_name"],
-        "city": document["address"]["region_2depth_name"],
-    }
+        return {
+            "lat": document["x"],
+            "lng": document["y"],
+            "province": document["address"]["region_1depth_name"],
+            "city": document["address"]["region_2depth_name"],
+        }
+    except:
+        return False
 
 
 def translate_property_name(property_name):
-    translate_table = {
-        "상품명": "name",
-        "맥주구분": "type",
-        "원산지": "country",
-        "용기구분": "container",
-        "생산주기": "production",
-        "주종": "type",
-        "도수": "ABV",
-        "알코올": "ABV",
-        "용량": "volume",
-        "가격": "price",
-        "원재료": "ingredients",
-        "생산자": "manufacturer",
-        "제조사": "manufacturer",
-        "대표자명": "owner",
-        "주소": "address",
-        "연락처": "phone",
-        "가격제공처": "price source",
-        "온라인스토어": "store",
-        "홈페이지": "homepage"
-    }
-
     try:
         return translate_table[property_name]
     except:
-        return property_name
+        return False
 
 
 def get_soup(url):
@@ -94,24 +91,31 @@ def get_doc(url):
 
     trs = entry_soup.select(
         '#size_ct > div.att_type div.wr_tmp_profile > div > table > tbody > tr')
+
+    whitelist = ["홈페이지", "온라인스토어"]
+
     for tr in trs:
         label = normalize_string(tr.select_one('th').text)
         content = normalize_string(tr.select_one('td').text)
+
         if label == "원재료":
             content = content.split(", ")
         if label == "주소":
-            content = get_address_content(content)
-        if label == "도수":
-            content = float(content[:-1])
-        if label == "용량":
-            content = float(content[:-2])
+            address = get_address_content(content)
+            if not address:
+                return False
+            content = address
 
-        doc[translate_property_name(label)] = content
+        if not translate_property_name(label):
+            return False
+
+        if label not in whitelist:
+            doc[translate_property_name(label)] = content
 
     doc["source"] = term_source
-    doc["image"] = image_url
 
-    return doc
+    if len(doc.keys()) == 11:
+        return doc
 
 
 def get_docs(CATEGORY_ID, MAX_PAGE):
@@ -127,7 +131,8 @@ def get_docs(CATEGORY_ID, MAX_PAGE):
         for title in titles:
             print(title.text)
             doc = get_doc(BASE_URL + title.get('href'))
-            docs.append(doc)
+            if doc:
+                docs.append(doc)
 
     return docs
 
@@ -138,9 +143,9 @@ def save_as_json(docs, file_name):
 
 
 if __name__ == '__main__':
-    한국전통주백과 = 58636
-    한국전통주백과_max_page = 39
+    한국전통주백과 = 58635
+    한국전통주백과_max_page = 50
     맥주백과 = 59595
 
-    docs = get_docs(한국전통주백과, 2)
-    save_as_json(docs, "전통주")
+    docs = get_docs(한국전통주백과, 한국전통주백과_max_page)
+    save_as_json(docs, "./data/전통주")
